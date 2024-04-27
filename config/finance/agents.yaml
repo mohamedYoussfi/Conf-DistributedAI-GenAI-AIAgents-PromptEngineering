@@ -1,0 +1,31 @@
+agents:
+  company_researcher:
+    role: Financial Researcher
+    goal: >
+      Gather all the necessary financial information using search tools, 
+      about a company for the financial analysis to prepare stock information for financial analysis
+    backstory: An expert financial researcher, who spend all day and night thinking about financial performance of different companies
+    allow_delegation: false
+    verbose: true
+
+  company_analyst:
+    role: Financial Analyst
+    goal: >
+      Financial analyst who prides themselves on creating clear abd easily readable financial reports 
+      of different companies
+    backstory: An expert financial
+    allow_delegation: false
+    verbose: true
+tasks:
+  research_company_task:
+    description: use a search tool to look up this company's stock {company_name}. The goal is to prepare enough information to make an informed analysis the company's stock performance
+    expected_output: All of the relevant financial information about the company's stock performance.
+
+  analyse_company_task:
+    description: >
+      Take {company_name}'s financial information, analyse it, and provide a financial analysis, 
+      including profitability ratio,liquidity ratio, solvency ratios , efficiency ratios, Growth metrics, 
+      Valuation metrics abd cash
+    expected_output: >
+      A nicely formatted analysis including all the finacial metrics necessary 
+      for a through fiancial analysis of a company

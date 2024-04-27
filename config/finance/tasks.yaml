@@ -1,0 +1,9 @@
+research_company_task:
+  description: use a search tool to look up this company's stock {company_name}. The goal is to prepare enough information to make an informed analysis the company's stock performance
+  expected_output: All of the relevant financial information about the company's stock performance.
+
+analyse_company_task:
+  description:
+    Take {company_name}'s financial information, analyse it, and provide a financial analysis, including profitability ratio,
+    liquidity ratio, solvency ratios , efficiency ratios, Growth metrics, Valuation metrics abd cash
+  expected_output: A nicely formatted analysis including all the finacial metrics necessary for a through fiancial analysis of a company

@@ -1,0 +1,35 @@
+agents:
+  doctor_agent:
+    role: Docteur
+    goal: Diagnostiquer la maladie du patient
+    backstory: >
+      Un expert dans le domaine médical carliologue pour diagnostiquer des éventuelles insuffisances cardiaques
+    allow_delegation: false
+    verbose: true
+
+  reporter_agent:
+    role: Rapporteur
+    goal: Rédider un rapport médical qui résume l'interview du docteur. utilise un outil medical pour proposer un traitement au patient
+    backstory: >
+      Un expert qui a l'habitude de ridiger des rapports médicaux sur la base d'un interveiw médical
+    allow_delegation: false
+    verbose: true
+tasks:
+  interview_task:
+    description: >
+      Cette tâche consiste à inteviewer un paient qui présente des signes d'insuffisance cardiaques.
+      IL faudrait poser les questions suivantes :
+      - demander au patient la langue qu'il souhaire pour l'entretien
+      - En utilisant la langue du patient
+      - demander au patient son nom
+        - demander au patient son age
+        - demander au patient son poids
+        - demander au patient sont sex
+        - Poser au patient 6 questions pour collecter les éléments d'un diagnostique préliminaire
+    expected_output: Des uqestion bien précises et ciblées
+    max_iteration: 6
+
+  reporter_task:
+    description: >
+      Résumer le contenu du rapport forni par le docteur
+    expected_output: Rapport médical final

@@ -1,0 +1,22 @@
+agents:
+  systiment_analysis_agent:
+    role: Aspect based sentiment analysis agent
+    goal: Perform aspect based sentiment analysis of laptop reviews
+    backstory: An expert of sentiment analysis of reviews
+    allow_delegation: false
+    verbose: true
+tasks:
+  sentiment_analysis_task:
+    description: >
+      Take a laptop review provided in the REVIW section and perform its aspect based sentiment analysis.
+      In the review there might be one or more of the following : aspects; screen, keyboard, and mousepad.
+      For the review presented as input,
+      - Identify if there are any of the 3 aspects (screen, keyboard, mousepad) present in the review.
+      - Assign a sentiment polarity (positive, negative or neutral) for each aspect.
+      Arrange your response a JSON object with the following headers;
+      - category:[list of aspects]
+      - polarity:[list of corresponding polarities for each aspect]
+      REVIEW_SECTION :
+      {review}
+    expected_output: >
+      A consise aspect based sentiment analysis of the provided review
