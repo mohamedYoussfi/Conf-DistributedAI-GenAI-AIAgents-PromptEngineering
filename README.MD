@@ -1,1 +1,1 @@
-<img src="conf-mundiapolis-emsi">
+<img src="conf-mundiapolis-emsi.jpg">
