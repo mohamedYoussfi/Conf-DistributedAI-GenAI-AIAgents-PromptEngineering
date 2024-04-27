@@ -4,8 +4,8 @@ from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
 import json
 
-OPEN_AI_KEY = "sk-proj-bkkDQOUCtyf7Ctj2afRXT3BlbkFJtxzf8IbMmA6uqAd1qt9j"
-GROQ_API_KEY = "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"
+OPEN_AI_KEY = "....."
+GROQ_API_KEY = "....."
 
 
 @CrewBase

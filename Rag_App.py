@@ -70,7 +70,7 @@ def main():
 
                 # Create Vector store
                 # OpenAI API key
-                OPEN_API_KEY = "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"
+                OPEN_API_KEY = "........"
                 # Create the OpenAIEmbeddings object
                 openai_embeddings = OpenAIEmbeddings(api_key=OPEN_API_KEY)
                 # Create the FAISS vector store from the text chunks and the OpenAIEmbeddings object
