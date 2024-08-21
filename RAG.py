@@ -25,12 +25,13 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 # Importing the create_retrieval_chain function
 from langchain.chains import create_retrieval_chain
 
+# from langchain_community.llms import Ollama
+# from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
+
 
 def main():
     st.set_page_config(layout="wide")
-    st.subheader(
-        "Retrieval Augmented Generation (RAG) Pedagogical Chatbot", divider="rainbow"
-    )
+    st.subheader("RAG Chatbot", divider="rainbow")
     with st.sidebar:
         # Title of the sidebar
         st.sidebar.title("Data Loader")
@@ -70,15 +71,17 @@ def main():
 
                 # Create Vector store
                 # OpenAI API key
-                OPEN_API_KEY = "....."
+                OPEN_API_KEY = "..."
                 # Create the OpenAIEmbeddings object
                 openai_embeddings = OpenAIEmbeddings(api_key=OPEN_API_KEY)
+                # llama_embeddings = FastEmbedEmbeddings()
                 # Create the FAISS vector store from the text chunks and the OpenAIEmbeddings object
                 openai_vector_store = FAISS.from_texts(
                     texts=chunks, embedding=openai_embeddings
                 )
                 # Create the language model (LLM) with the OpenAI API key
                 llm = ChatOpenAI(api_key=OPEN_API_KEY, model="gpt-4o")
+                # llama = Ollama(model="llama3")
                 # Create the conversational retrieval chain with the language model, the memory, and the vector store
                 prompt = ChatPromptTemplate.from_template(
                     """
